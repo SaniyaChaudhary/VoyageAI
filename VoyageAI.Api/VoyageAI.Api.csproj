@@ -14,4 +14,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VoyageAI.Application\VoyageAI.Application.csproj" />
+    <ProjectReference Include="..\VoyageAI.Infrastructure\VoyageAI.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

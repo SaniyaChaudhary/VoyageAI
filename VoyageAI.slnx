@@ -3,4 +3,7 @@
     <File Path="README.md" />
   </Folder>
   <Project Path="VoyageAI.Api/VoyageAI.Api.csproj" />
+  <Project Path="VoyageAI.Application/VoyageAI.Application.csproj" />
+  <Project Path="VoyageAI.Domain/VoyageAI.Domain.csproj" />
+  <Project Path="VoyageAI.Infrastructure/VoyageAI.Infrastructure.csproj" />
 </Solution>
