@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VoyageAI.Application.Interfaces
+namespace VoyageAI.Application.Interfaces;
+public interface IAIService
 {
-    internal class IAIService
-    {
-    }
+    Task<string> GenerateResponseAsync(string prompt);
 }

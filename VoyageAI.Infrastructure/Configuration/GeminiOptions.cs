@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace VoyageAI.Infrastructure.Configuration;
 
-namespace VoyageAI.Infrastructure.Configuration
+public class GeminiOptions
 {
-    internal class GeminiOptions
-    {
-    }
+    public string ApiKey { get; set; } = string.Empty;
+
+    public string Model { get; set; } = string.Empty;
 }

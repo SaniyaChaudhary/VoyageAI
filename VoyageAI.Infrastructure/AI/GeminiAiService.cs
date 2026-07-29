@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using VoyageAI.Application.Interfaces;
 
-namespace VoyageAI.Infrastructure.AI
+namespace VoyageAI.Infrastructure.AI;
+
+public class GeminiAiService : IAIService
 {
-    internal class OpenAIService
+    public async Task<string> GenerateResponseAsync(string prompt)
     {
+        return "AI generated travel plan placeholder";
     }
 }

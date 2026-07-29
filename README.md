@@ -17,8 +17,8 @@ VoyageAI is an intelligent travel planning application that helps users create p
 - OAuth 2.0
 
 ### AI Integration
-- Azure OpenAI
-- Semantic Kernel
+- Google Gemini API
+- Custom AI service abstraction using Clean Architecture
 
 ### Frontend
 - React
@@ -53,6 +53,19 @@ VoyageAI
 ├── VoyageAI.Domain
 └── VoyageAI.Infrastructure
 
+
+### AI Architecture
+
+The AI integration follows a service abstraction approach:
+
+IAIService
+│
+└── GeminiAIService
+        │
+        └── Google Gemini API
+
+
+This allows the AI provider to be replaced in the future without changing the core application logic.
 
 ## Status
 

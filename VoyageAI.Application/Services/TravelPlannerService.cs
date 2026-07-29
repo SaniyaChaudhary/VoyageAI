@@ -5,8 +5,26 @@ namespace VoyageAI.Application.Services;
 
 public class TravelPlannerService : ITravelPlannerService
 {
+    private readonly IAIService _aiService;
+
+    public TravelPlannerService(IAIService aiService)
+    {
+        _aiService = aiService;
+    }
+
     public async Task<TripResponseDto> GeneratePlanAsync(TripRequestDto request)
     {
+        var prompt = $"""
+        Create a travel itinerary.
+
+        Destination: {request.Destination}
+        Duration: {request.DurationDays} days
+        Budget: {request.Budget}
+        Interests: {string.Join(", ", request.Interests)}
+        """;
+
+        var aiResponse = await _aiService.GenerateResponseAsync(prompt);
+
         return new TripResponseDto
         {
             Destination = request.Destination,
@@ -14,14 +32,12 @@ public class TravelPlannerService : ITravelPlannerService
             EstimatedCost = request.Budget,
             Itinerary = new List<string>
             {
-                "Explore local attractions",
-                "Try local cuisine",
-                "Visit cultural landmarks"
+                aiResponse
             },
             TravelTips = new List<string>
             {
-                "Carry travel documents",
-                "Check local weather before travelling"
+                "Check weather before travelling",
+                "Keep travel documents ready"
             }
         };
     }
