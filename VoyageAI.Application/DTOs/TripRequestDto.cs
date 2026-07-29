@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
+namespace VoyageAI.Application.DTOs;
+
 public class TripRequestDto
 {
     public string Destination { get; set; } = string.Empty;

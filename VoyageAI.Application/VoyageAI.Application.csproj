@@ -10,9 +10,4 @@
     <ProjectReference Include="..\VoyageAI.Domain\VoyageAI.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>

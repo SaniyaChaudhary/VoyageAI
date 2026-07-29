@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using VoyageAI.Application.DTOs;
 
-namespace VoyageAI.Application.Interfaces
+namespace VoyageAI.Application.Interfaces;
+public interface ITravelPlannerService
 {
-    internal class ITravelPlannerService
-    {
-    }
+    Task<TripResponseDto> GeneratePlanAsync(TripRequestDto request);
 }
